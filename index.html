@@ -93,7 +93,6 @@ Always yours,<br>
 <div class="time"><strong id="mins">--</strong><small>MINUTES</small></div>
 <div class="time"><strong id="secs">--</strong><small>SECONDS</small></div>
 </div>
-<p style="font-size:14px">The countdown uses the next September 27 at midnight. You can change the birthday date in the code if needed.</p>
 </div>
 </section>
 
@@ -130,8 +129,8 @@ function pop(){let x=document.createElement('div');x.className='float';x.textCon
 setInterval(pop,650)
 function celebrate(){for(let i=0;i<45;i++)setTimeout(pop,i*60);try{document.getElementById('music').play()}catch(e){}}
 function countdown(){
- let now=new Date(), year=now.getFullYear(), target=new Date(year,8,27,0,0,0);
- if(target<=now)target=new Date(year+1,8,27,0,0,0);
+ let now=new Date(), year=now.getFullYear(), target=new Date(year,8,28,0,0,0);
+ if(target<=now)target=new Date(year+1,8,28,0,0,0);
  let d=Math.max(0,target-now),days=Math.floor(d/86400000);d%=86400000;
  let h=Math.floor(d/3600000);d%=3600000;let m=Math.floor(d/60000);let s=Math.floor((d%60000)/1000);
  document.getElementById('days').textContent=days;document.getElementById('hours').textContent=String(h).padStart(2,'0');
